@@ -139,6 +139,12 @@ nav .button:hover{
     background-color: var(--greenish);
     color: var(--bgdark);
 }
+.section-projects a{
+    color: var(--aqua);
+}
+.section-projects a:hover{
+    color: var(--foreprimary);
+}
 #projects{
     padding: 4rem 1rem;
 }
