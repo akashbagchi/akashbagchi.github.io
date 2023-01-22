@@ -1,14 +1,10 @@
 /* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
-    --bgdark: #292F2D;
-    --bglight: #3A4245;
-    --bglighter: #637075;
-    --foreprimary: #F2F2D5;
-    --foresecondary: #D9961A;
-    --aqua: #8FBBC4;
-    --white: #FEFFFF;
-    --greenish: #78AD92;
-    --brick: #B33E24;
+    --primarycolor: #dbd8e0;
+    --secondarycolor: #070316;
+    --accentcolor1: #47634e;
+    --accentcolor2: #c83720;
+    --accentcolor3: #cbb92f;
     --font-size: 1.3rem;
     --comm: 'Commissioner', sans-serif;
     --fraun: 'Fraunces', serif;
@@ -26,24 +22,24 @@ body{
   padding: 0;
   margin: 0;
   font-family: var(--comm);
-  background-color: var(--bgdark);
-  color: var(--foresecondary);
+  background-color: var(--primarycolor);
+  color: var(--secondarycolor);
 }
 h1, h2, h3{
   margin: 0;
 }
 a{
-  color: var(--foreprimary);
+  color: var(--accentcolor2);
 }
 a:hover {
-  color: var(--aqua);
+  color: var(--accentcolor3);
   text-decoration: none;
 }
 img{
     width: 100%;
 }
 
-/* Background color divs */
+/* Divider lines */
 .gradient-contact{
     background: linear-gradient(90deg, rgba(143,187,196,1) 0%, rgba(179,62,36,1) 100%);
     height: 3px;
@@ -82,30 +78,33 @@ nav li:first-child{
 }
 nav [class*="fa-"]{
   font-size: 150%;
-  color: var(--aqua);
+  color: var(--accentcolor2);
 }
 nav .nameicon{
   padding: 8px;
   font-size: 100%;
 }
 nav a{
-  color: var(--foreprimary);
+  color: var(--secondarycolor);
   text-decoration: none;
   display: block;
 }
+nav .navbuttontext{
+  color: var(--primarycolor)
+}
 nav a:hover{
-  color: var(--aqua)
+  color: var(--accentcolor2);
 }
 nav [class*="fa-"]:hover{
-  color: var(--foreprimary);
+  color: var(--secondarycolor);
 }
 nav .button{
-  background-color: var(--foresecondary);
+  background-color: var(--secondarycolor);
   padding: 0.5rem;
   border-radius: 6px;
 }
 nav .button:hover{
-  background-color: var(--bglight);
+  background-color: var(--accentcolor2);
 }
 
 /* Intro styles */
@@ -124,7 +123,7 @@ nav .button:hover{
 .name span{
   font-family: var(--fraun);
   font-size: 4rem;
-  color: var(--foreprimary);
+  color: var(--accentcolor2);
   display: block;
 }
 .mainline{
@@ -136,14 +135,17 @@ nav .button:hover{
 
 /* Projects section */
 .section-projects{
-    background-color: var(--greenish);
-    color: var(--bgdark);
+    background-color: var(--accentcolor1);
+    color: var(--primarycolor);
 }
 .section-projects a{
-    color: var(--aqua);
+    color: var(--accentcolor2);
+    font-weight: bold;
 }
 .section-projects a:hover{
-    color: var(--foreprimary);
+    color: var(--accentcolor2);
+    text-decoration-line: none;
+    font-weight: bolder;
 }
 #projects{
     padding: 4rem 1rem;
@@ -152,20 +154,23 @@ nav .button:hover{
     font-size: 2.5rem;
     margin-bottom: calc(2.5rem*1.5);
     font-family: var(--fraun);
+    color: var(--primarycolor);
 }
 #projects h3{
-    color: var(--foreprimary);
+    color: var(--primarycolor);
     font-family: var(--fraun);
 }
 #projects h4{
     font-size: 1rem;
     margin: 0;
+    color: var(--accentcolor3);
+    font-weight: bold;
 }
 .blackbox{
-    background-color: var(--bgdark);
+    background-color: var(--primarycolor);
     padding: 1rem;
     border-radius: 13px;
-    color: var(--foreprimary);
+    color: var(--secondarycolor);
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -181,10 +186,10 @@ nav .button:hover{
 }
 #projects img{
     margin: 2rem 0 4rem 0;
-    border-left: 2px solid var(--foreprimary);
-    border-top: 2px solid var(--foreprimary);
+    border-left: 2px solid var(--primarycolor);
+    border-top: 2px solid var(--primarycolor);
     border-radius: 25px;
-    padding: 1rem;
+    padding: 0.6rem;
     /* width: 80%; */
 }
 #projects article h2, h3, h4{
@@ -232,15 +237,15 @@ nav .button:hover{
 
 /* Contact me section */
 .section-contact{
-    background-color: var(--foresecondary);
+    background-color: var(--primarycolor);
 }
 .section-contact .button{
-    background-color: var(--foreprimary);
+    background-color: var(--accentcolor1);
     padding: 0.5rem;
     border-radius: 6px;
   }
 .section-contact .button:hover{
-    background-color: var(--bglight);
+    background-color: var(--secondarycolor);
   }
 #contactme{
   width: 400px;
@@ -248,20 +253,23 @@ nav .button:hover{
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  color: var(--foreprimary)
+  color: var(--secondarycolor)
+}
+#contactme h2{
+  color: var(--accentcolor1);
 }
 #contactme a{
     text-decoration: none;
-    color: var(--bgdark);
+    color: var(--primarycolor);
 }
 #contactme a:hover{
-  color: var(--foreprimary)
+  color: var(--primarycolor)
 }
 
 /* Footer section */
 footer{
-  color: var(--aqua);
-  background-color: var(--bglight);
+  color: var(--primarycolor);
+  background-color: var(--secondarycolor);
   padding: 4rem 0;
 }
 #content{
@@ -284,16 +292,16 @@ footer li{
 }
 footer p{
   font-size: 80%;
-  color: var(--foreprimary);
+  color: var(--primarycolor);
 }
 .abouttext{
-    color: var(--aqua);
+    color: var(--primarycolor);
 }
 .aboutlink{
-    color: var(--aqua);
+    color: var(--accentcolor2);
 }
 .aboutlink:hover{
-    color: var(--foreprimary);
+    color: var(--primarycolor);
 }
 
 @media (min-width: 850px){
