@@ -347,12 +347,14 @@ footer p {
 .color-picker > fieldset {
   border: 0;
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   width: fit-content;
   background: #fff;
-  padding: 1rem 3rem;
-  border-radius: 0 0 1rem 1rem;
-  margin-inline: auto;
+  padding: 3rem 1rem;
+  border-radius: 0 1rem 1rem 0;
+  position: fixed;
+  
 }
 
 .color-picker input[type="radio"] {
