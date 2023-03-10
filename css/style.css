@@ -386,6 +386,7 @@ footer p {
   --radio-color: green;
 }
 
+.light,
 :root:has(#light:checked) {
   --primarycolor: #dbd8e0;
   --secondarycolor: #070316;
@@ -394,6 +395,7 @@ footer p {
   --accentcolor3: #cbb92f;
 }
 
+.dark,
 :root:has(#dark:checked) {
   --primarycolor: #280318;
   --secondarycolor: #e8d744;
@@ -402,6 +404,7 @@ footer p {
   --accentcolor3: #ae21ab;
 }
 
+.blue,
 :root:has(#blue:checked) {
   --primarycolor: #dbd8e0;
   --secondarycolor: #070316;
@@ -410,6 +413,7 @@ footer p {
   --accentcolor3: #cbb92f;
 }
 
+.green,
 :root:has(#green:checked) {
   --primarycolor: #dbd8e0;
   --secondarycolor: #070316;
