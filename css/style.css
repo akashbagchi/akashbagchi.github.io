@@ -386,42 +386,6 @@ footer p {
   --radio-color: green;
 }
 
-.light,
-:root:has(#light:checked) {
-  --primarycolor: #dbd8e0;
-  --secondarycolor: #070316;
-  --accentcolor1: #47634e;
-  --accentcolor2: #c83720;
-  --accentcolor3: #cbb92f;
-}
-
-.dark,
-:root:has(#dark:checked) {
-  --primarycolor: #280318;
-  --secondarycolor: #e8d744;
-  --accentcolor1: #ffa738;
-  --accentcolor2: #6fd0c9;
-  --accentcolor3: #ae21ab;
-}
-
-.blue,
-:root:has(#blue:checked) {
-  --primarycolor: #dbd8e0;
-  --secondarycolor: #070316;
-  --accentcolor1: #47634e;
-  --accentcolor2: #c83720;
-  --accentcolor3: #cbb92f;
-}
-
-.green,
-:root:has(#green:checked) {
-  --primarycolor: #dbd8e0;
-  --secondarycolor: #070316;
-  --accentcolor1: #47634e;
-  --accentcolor2: #c83720;
-  --accentcolor3: #cbb92f;
-}
-
 @media (min-width: 850px) {
   nav {
     max-width: 1200px;
