@@ -344,6 +344,17 @@ footer p {
   width: 1px;
 } */
 
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  gap: 2rem;
+  width: fit-content;
+  background: #fff;
+  padding: 1rem 3rem;
+  border-radius: 0 0 1rem 1rem;
+  margin-inline: auto;
+}
+
 @media (min-width: 850px) {
   nav {
     max-width: 1200px;
