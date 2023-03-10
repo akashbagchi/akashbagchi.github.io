@@ -355,6 +355,15 @@ footer p {
   margin-inline: auto;
 }
 
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid var(--radio-color, currentColor);
+  border-radius: 50%;
+
+}
+
 @media (min-width: 850px) {
   nav {
     max-width: 1200px;
