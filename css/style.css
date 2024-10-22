@@ -1,16 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=DM%20Serif%20Display:700|Noto%20Serif%20KR:400");
+
 /* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
-  --primarycolor: #dbd8e0;
-  --secondarycolor: #070316;
-  --accentcolor1: #47634e;
-  --accentcolor2: #c83720;
-  --accentcolor3: #cbb92f;
+  --color-background: #f1f5ef;
+  --color-text: #10160e;
+  --color-primary: #b5cdaf;
+  --color-secondary: #416652;
+  --color-accent: #70a497;
   --font-size: 1.3rem;
   --comm: "Commissioner", sans-serif;
   --fraun: "Fraunces", serif;
-  --primaryfont: "Cinzel", serif;
-  --secondaryfont: "Josefin Slab", serif;
-  --tertiaryfont: "Hind Vadodara", sans-serif;
+  --font-heading: "DM Serif Display", serif;
+  --font-body: "Noto Serif KR", serif;
 }
 /* border box model: https://css-tricks.com/box-sizing/ */
 html {
@@ -24,9 +25,18 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--tertiaryfont);
-  background-color: var(--primarycolor);
-  color: var(--secondarycolor);
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 h1,
 h2,
@@ -34,10 +44,10 @@ h3 {
   margin: 0;
 }
 a {
-  color: var(--accentcolor2);
+  color: var(--color-secondary);
 }
 a:hover {
-  color: var(--accentcolor3);
+  color: var(--color-accent);
   text-decoration: none;
 }
 img {
@@ -46,18 +56,18 @@ img {
 
 /* Divider lines */
 .gradient-footer {
-  background: var(--accentcolor2);
+  background: var(--color-secondary);
   height: 3px;
 }
 
 /*Navbar section*/
 nav {
-  font-family: var(--tertiaryfont);
+  font-family: var(--font-body);
   font-size: 80%;
   padding: 1rem;
 }
 nav h1 a {
-  font-family: var(--secondaryfont);
+  font-family: var(--font-body);
 }
 nav ul {
   list-style-type: none;
@@ -75,33 +85,33 @@ nav li:first-child {
 }
 nav [class*="fa-"] {
   font-size: 150%;
-  color: var(--accentcolor2);
+  color: var(--color-secondary);
 }
 nav .nameicon {
   padding: 8px;
   font-size: 100%;
 }
 nav a {
-  color: var(--secondarycolor);
+  color: var(--color-text);
   text-decoration: none;
   display: block;
 }
 nav .navbuttontext {
-  color: var(--primarycolor);
+  color: var(--color-background);
 }
 nav a:hover {
-  color: var(--accentcolor2);
+  color: var(--color-secondary);
 }
 nav [class*="fa-"]:hover {
-  color: var(--secondarycolor);
+  color: var(--color-text);
 }
 nav .button {
-  background-color: var(--secondarycolor);
+  background-color: var(--color-text);
   padding: 0.5rem;
   border-radius: 6px;
 }
 nav .button:hover {
-  background-color: var(--accentcolor2);
+  background-color: var(--color-secondary);
 }
 
 /* Intro styles */
@@ -113,21 +123,21 @@ nav .button:hover {
 #intro p {
   font-size: 1rem;
   line-height: 1.5;
-  font-family: var(--tertiaryfont);
+  font-family: var(--font-body);
   font-weight: 400;
 }
 #intro .name {
-  font-family: var(--tertiaryfont);
+  font-family: var(--font-body);
   font-weight: 300;
 }
 .name span {
-  font-family: var(--primaryfont);
+  font-family: var(--font-heading);
   font-size: 4rem;
-  color: var(--accentcolor2);
+  color: var(--color-secondary);
   display: block;
 }
 .mainline {
-  font-family: var(--secondaryfont);
+  font-family: var(--font-body);
 }
 #intro h2 {
   font-size: 3rem;
@@ -135,13 +145,13 @@ nav .button:hover {
 
 /* Projects section */
 .section-projects {
-  background-color: var(--accentcolor1);
-  color: var(--primarycolor);
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 @media (min-width: 850px) {
   .section-projects {
-    background-color: var(--accentcolor1);
-    color: var(--primarycolor);
+    background-color: var(--color-primary);
+    color: var(--color-background);
     border-radius: 13px;
     width: 97%;
     margin: auto;
@@ -149,19 +159,19 @@ nav .button:hover {
 }
 @media (min-width: 1000px) {
   .section-projects {
-    background-color: var(--accentcolor1);
-    color: var(--primarycolor);
+    background-color: var(--color-primary);
+    color: var(--color-background);
     border-radius: 18px;
     width: 80%;
     margin: auto;
   }
 }
 .section-projects a {
-  color: var(--accentcolor2);
+  color: var(--color-secondary);
   font-weight: bold;
 }
 .section-projects a:hover {
-  color: var(--accentcolor2);
+  color: var(--color-secondary);
   text-decoration-line: none;
   font-weight: bolder;
 }
@@ -171,25 +181,28 @@ nav .button:hover {
 #projects h2 {
   font-size: 3rem;
   margin-bottom: calc(2.5rem * 1.5);
-  font-family: var(--primaryfont);
-  color: var(--primarycolor);
+  font-family: var(--font-heading);
+  color: var(--color-background);
 }
 #projects h3 {
-  color: var(--primarycolor);
-  font-family: var(--secondaryfont);
+  color: var(--color-background);
+  font-family: var(--font-body);
   font-size: 160%;
 }
 #projects h4 {
   font-size: 1rem;
   margin: 0;
-  color: var(--accentcolor3);
+  color: var(--color-secondary);
   font-weight: bold;
 }
+/* #projects li {
+  
+} */
 .blackbox {
-  background-color: var(--primarycolor);
+  background-color: var(--color-background);
   padding: 1rem;
   border-radius: 13px;
-  color: var(--secondarycolor);
+  color: var(--color-text);
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -202,12 +215,12 @@ nav .button:hover {
   justify-content: flex-start;
   gap: 1rem;
   font-size: 1rem;
-  font-family: var(--tertiaryfont);
+  font-family: var(--font-body);
 }
 #projects img {
   margin: 2rem 0 4rem 0;
-  border-left: 2px solid var(--primarycolor);
-  border-top: 2px solid var(--primarycolor);
+  border-left: 2px solid var(--color-background);
+  border-top: 2px solid var(--color-background);
   border-radius: 25px;
   padding: 0.6rem;
   /* width: 80%; */
@@ -261,15 +274,15 @@ h4 {
 
 /* Contact me section */
 .section-contact {
-  background-color: var(--primarycolor);
+  background-color: var(--color-background);
 }
 .section-contact .button {
-  background-color: var(--secondarycolor);
+  background-color: var(--color-text);
   padding: 0.5rem;
   border-radius: 6px;
 }
 .section-contact .button:hover {
-  background-color: var(--accentcolor2);
+  background-color: var(--color-secondary);
 }
 #contactme {
   width: 400px;
@@ -277,25 +290,25 @@ h4 {
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  color: var(--secondarycolor);
+  color: var(--color-text);
 }
 #contactme h2 {
-  color: var(--accentcolor2);
-  font-family: var(--primaryfont);
+  color: var(--color-secondary);
+  font-family: var(--font-heading);
   font-size: 200%;
 }
 #contactme a {
   text-decoration: none;
-  color: var(--primarycolor);
+  color: var(--color-background);
 }
 #contactme a:hover {
-  color: var(--primarycolor);
+  color: var(--color-background);
 }
 
 /* Footer section */
 footer {
-  color: var(--primarycolor);
-  background-color: var(--secondarycolor);
+  color: var(--color-background);
+  background-color: var(--color-text);
   padding: 4rem 0;
 }
 #content {
@@ -304,7 +317,7 @@ footer {
   text-align: center;
 }
 footer h2 {
-  font-family: var(--secondaryfont);
+  font-family: var(--font-body);
   font-size: 160%;
 }
 footer ul {
@@ -322,16 +335,16 @@ footer li {
 }
 footer p {
   font-size: 80%;
-  color: var(--primarycolor);
+  color: var(--color-background);
 }
 .abouttext {
-  color: var(--primarycolor);
+  color: var(--color-background);
 }
 .aboutlink {
-  color: var(--accentcolor2);
+  color: var(--color-secondary);
 }
 .aboutlink:hover {
-  color: var(--primarycolor);
+  color: var(--color-background);
 }
 
 @media (min-width: 850px) {
