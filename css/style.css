@@ -190,7 +190,7 @@ nav .button:hover {
   font-size: 160%;
 }
 #projects h4 {
-  font-size: 1rem;
+  font-size: 1rem !important;
   margin: 0;
   color: var(--color-secondary);
   font-weight: bold;
@@ -225,16 +225,12 @@ nav .button:hover {
   padding: 0.6rem;
   /* width: 80%; */
 }
-#projects article h2,
+/* #projects article h2,
 h3,
 h4 {
   font-size: 150%;
-}
-#projects article .reverse h2,
-h3,
-h4 {
-  font-size: 150%;
-}
+} */
+
 @media (min-width: 750px) {
   article {
     display: grid;
@@ -258,17 +254,28 @@ h4 {
   #projects ul {
     justify-content: flex-end;
   }
-  #projects .reverse img {
+  #projects article:nth-child(even) h2,
+  #projects article:nth-child(even) h3,
+  #projects article:nth-child(even) h4 {
+    font-size: 150%;
+  }
+
+  #projects article:nth-child(even) img {
     grid-column: 6/11;
     grid-row: 1/2;
   }
-  #projects .reverse .text {
+
+  #projects article:nth-child(even) .text {
     grid-column: 1/7;
     order: 2;
     text-align: left;
   }
-  #projects .reverse ul {
+
+  #projects article:nth-child(even) ul {
     justify-content: flex-start;
+  }
+  .blackbox {
+    text-align: left;
   }
 }
 
@@ -337,11 +344,17 @@ footer p {
   font-size: 80%;
   color: var(--color-background);
 }
+footer a {
+  color: var(--color-accent);
+}
+footer a:hover {
+  color: var(--color-background);
+}
 .abouttext {
   color: var(--color-background);
 }
 .aboutlink {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 .aboutlink:hover {
   color: var(--color-background);
