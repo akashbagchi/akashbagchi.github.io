@@ -240,6 +240,7 @@ h4 {
   #projects {
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 5rem;
   }
   #projects img {
     grid-column: 1/6;
