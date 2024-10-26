@@ -1,0 +1,80 @@
+.theme-toggle {
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  background: var(--color-secondary);
+  color: var(--color-background);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--color-accent);
+}
+
+.theme-toggle i {
+  font-size: 1.2rem;
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Show/hide icons based on theme */
+.theme-toggle .sun-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.theme-toggle .moon-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+/* Dark theme state */
+.theme-toggle[data-theme="dark"] .sun-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.theme-toggle[data-theme="dark"] .moon-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+@keyframes initialBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-8px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+.theme-toggle.initial-bounce {
+  animation: initialBounce 0.8s cubic-bezier(0.36, 0, 0.66, -0.56) 1s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) translateY(0);
+  background: var(--color-accent);
+}

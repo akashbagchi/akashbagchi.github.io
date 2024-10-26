@@ -2,16 +2,29 @@
 
 /* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
-  --color-background: #f1f5ef;
-  --color-text: #10160e;
-  --color-primary: #b5cdaf;
-  --color-secondary: #416652;
-  --color-accent: #70a497;
   --font-size: 1.3rem;
   --comm: "Commissioner", sans-serif;
   --fraun: "Fraunces", serif;
   --font-heading: "DM Serif Display", serif;
   --font-body: "Noto Serif KR", serif;
+}
+
+/* Light theme (default) */
+:root {
+  --color-background: #f1f5ef;
+  --color-text: #10160e;
+  --color-primary: #b5cdaf;
+  --color-secondary: #416652;
+  --color-accent: #70a497;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-background: #0c100a;
+  --color-text: #ebf1e9;
+  --color-primary: #374e31;
+  --color-secondary: #98bdaa;
+  --color-accent: #5b8f82;
 }
 /* border box model: https://css-tricks.com/box-sizing/ */
 html {
@@ -90,6 +103,7 @@ nav [class*="fa-"] {
 nav .nameicon {
   padding: 8px;
   font-size: 100%;
+  color: var(--color-secondary);
 }
 nav a {
   color: var(--color-text);
@@ -148,6 +162,10 @@ nav .button:hover {
   background-color: var(--color-primary);
   color: var(--color-background);
 }
+[data-theme="dark"] .section-projects {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
 @media (min-width: 850px) {
   .section-projects {
     background-color: var(--color-primary);
@@ -175,6 +193,12 @@ nav .button:hover {
   text-decoration-line: none;
   font-weight: bolder;
 }
+[data-theme="dark"] .section-projects a {
+  color: var(--color-secondary);
+}
+[data-theme="dark"] .section-projects a:hover {
+  color: var(--color-text);
+}
 #projects {
   padding: 4rem 1rem;
 }
@@ -195,8 +219,13 @@ nav .button:hover {
   color: var(--color-secondary);
   font-weight: bold;
 }
+[data-theme="dark"] #projects h2,
+#projects h3,
+#projects h4 {
+  color: var(--color-primary);
+}
 /* #projects li {
-  
+
 } */
 .blackbox {
   background-color: var(--color-background);
@@ -223,13 +252,11 @@ nav .button:hover {
   border-top: 2px solid var(--color-background);
   border-radius: 25px;
   padding: 0.6rem;
-  /* width: 80%; */
 }
-/* #projects article h2,
-h3,
-h4 {
-  font-size: 150%;
-} */
+[data-theme="dark"] #projects img {
+  border-left: 2px solid var(--color-text);
+  border-top: 2px solid var(--color-text);
+}
 
 @media (min-width: 750px) {
   article {
@@ -280,44 +307,15 @@ h4 {
   }
 }
 
-/* Contact me section */
-.section-contact {
-  background-color: var(--color-background);
-}
-.section-contact .button {
-  background-color: var(--color-text);
-  padding: 0.5rem;
-  border-radius: 6px;
-}
-.section-contact .button:hover {
-  background-color: var(--color-secondary);
-}
-#contactme {
-  width: 400px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  color: var(--color-text);
-}
-#contactme h2 {
-  color: var(--color-secondary);
-  font-family: var(--font-heading);
-  font-size: 200%;
-}
-#contactme a {
-  text-decoration: none;
-  color: var(--color-background);
-}
-#contactme a:hover {
-  color: var(--color-background);
-}
-
 /* Footer section */
 footer {
   color: var(--color-background);
   background-color: var(--color-text);
   padding: 4rem 0;
+}
+[data-theme="dark"] footer {
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 #content {
   width: 400px;
@@ -345,30 +343,36 @@ footer p {
   font-size: 80%;
   color: var(--color-background);
 }
+[data-theme="dark"] footer p {
+  color: var(--color-text);
+}
 footer a {
   color: var(--color-accent);
 }
-footer a:hover {
-  color: var(--color-background);
-}
-.abouttext {
-  color: var(--color-background);
-}
-.aboutlink {
-  color: var(--color-primary);
-}
-.aboutlink:hover {
-  color: var(--color-background);
-}
-
-@media (min-width: 850px) {
-  nav {
-    max-width: 1200px;
-    margin: 0 auto;
+[data-theme="dark"] footer a {
+  color: var(--color-secondary);
+  footer a:hover {
+    color: var(--color-background);
   }
-  nav li:first-child {
-    flex-basis: auto;
-    text-align: left;
-    margin-right: auto;
+  .abouttext {
+    color: var(--color-background);
+  }
+  .aboutlink {
+    color: var(--color-primary);
+  }
+  .aboutlink:hover {
+    color: var(--color-background);
+  }
+
+  @media (min-width: 850px) {
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
   }
 }
