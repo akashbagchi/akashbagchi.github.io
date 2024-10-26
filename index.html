@@ -1,35 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akash Bagchi's Portfolio</title>
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="assets/styles/base.css" rel="stylesheet" />
+    <link href="assets/styles/components/leaves.css" rel="stylesheet" />
+    <link href="assets/styles/components/theme-toggle.css" rel="stylesheet" />
+    <script src="assets/scripts/theme-toggle.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300&family=Fraunces&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oxygen&amp;family=Oxygen+Mono&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css?family=DM%20Serif%20Display:700|Noto%20Serif%20KR:400"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
   <body>
@@ -38,19 +26,71 @@
       <ul>
         <li>
           <h1 class="nameline">
-            <a href="index.html"
+            <a href="/"
               ><span class="fa-solid fa-user-astronaut nameicon"></span
               ><span>Akash Bagchi</span></a
             >
           </h1>
         </li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contactme">Contact</a></li>
         <li>
           <a
-            href="https://www.linkedin.com/in/akash-bagchi2710/"
+            href="https://garden.akashbagchi.xyz"
             target="_blank"
+            rel="noopener noreferrer"
+          >
+            Digital Garden
+            <svg
+              class="leaves-container"
+              viewBox="0 0 100 60"
+              preserveAspectRatio="none"
+            >
+              <path
+                class="leaf leaf-1"
+                d="M 10 20 Q 14 14, 18 20 Q 14 26, 10 20"
+              />
+              <path
+                class="leaf leaf-2"
+                d="M 30 15 Q 34 9, 38 15 Q 34 21, 30 15"
+              />
+              <path
+                class="leaf leaf-3"
+                d="M 50 25 Q 54 19, 58 25 Q 54 31, 50 25"
+              />
+              <path
+                class="leaf leaf-4"
+                d="M 70 15 Q 74 9, 78 15 Q 74 21, 70 15"
+              />
+              <path
+                class="leaf leaf-5"
+                d="M 90 20 Q 94 14, 98 20 Q 94 26, 90 20"
+              />
+              <path
+                class="leaf leaf-6"
+                d="M 20 25 Q 24 19, 28 25 Q 24 31, 20 25"
+              />
+              <path
+                class="leaf leaf-7"
+                d="M 40 18 Q 44 12, 48 18 Q 44 24, 40 18"
+              />
+              <path
+                class="leaf leaf-8"
+                d="M 60 22 Q 64 16, 68 22 Q 64 28, 60 22"
+              />
+              <path
+                class="leaf leaf-9"
+                d="M 80 17 Q 84 11, 88 17 Q 84 23, 80 17"
+              />
+              <path
+                class="leaf leaf-10"
+                d="M 15 15 Q 19 9, 23 15 Q 19 21, 15 15"
+              />
+            </svg>
+          </a>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li>
+          <a href="www.linkedin.com/in/akashbagchi" target="_blank"
             ><span class="fa-brands fa-linkedin" aria-hidden="true"></span
             ><span class="sr-only">LinkedIn</span></a
           >
@@ -62,10 +102,7 @@
           >
         </li>
         <li>
-          <a
-            href="https://docs.google.com/document/d/1yor5yW6yeLbSb-a5pWNPSPyw9qwMuREPaaZL5e7L1Cg/edit?usp=sharing"
-            target="_blank"
-            class="button"
+          <a href="assets/files/Resume_Akash.pdf" target="_blank" class="button"
             ><span class="navbuttontext">Resume</span></a
           >
         </li>
@@ -75,15 +112,15 @@
     <!-- Intro section -->
     <section id="intro">
       <p class="name">Hi, my name is <span>Akash Bagchi</span></p>
-      <h2 class="mainline">I'm an aspiring UX Designer</h2>
+      <h2 class="mainline">I'm a Front-End developer and UX Designer.</h2>
       <p>
-        I'm a Product Development Engineer in Tokyo, Japan with experience in UX Design & Research, Front-End & Full-Stack
-        Development, Machine Learning, Game Development etc.
+        I'm experienced in Front-End & Full-Stack Development, UX Design &
+        Research, API Development, Machine Learning, Game Development etc.
       </p>
       <p>
         I'm currently working at
-        <a href="https://www.lakeel.com/ja/index.html">株式会社 LaKeel</a> as part of their
-        Product Development Unit.
+        <a href="https://www.lakeel.com/ja/index.html">株式会社 LaKeel</a> as a
+        Product Development Engineer.
       </p>
     </section>
 
@@ -91,9 +128,71 @@
     <div class="section-projects">
       <section id="projects">
         <h2>Projects I'm proud of</h2>
-        <article class="reverse">
+        <article>
           <div class="text">
             <h4>Latest Project</h4>
+            <h3>Digital Garden</h3>
+            <p class="blackbox">
+              A digital garden is more than just a personal or professional
+              blog. It's a collection of evolving ideas, that are interconnected
+              by contextual associations and grow over time, giving rise to
+              emergent patterns and insights. The reader gets to actively choose
+              which trail to follow. Here I document my thoughts, ideas, and
+              learnings from both my personal and professional life. I'd love
+              for you to take a look!
+              <a
+                href="https://garden.akashbagchi.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit my Garden</a
+              >
+            </p>
+            <h4>Technologies used:</h4>
+            <ul>
+              <li>Obsidian</li>
+              <li>Quartz</li>
+            </ul>
+          </div>
+          <img
+            src="assets/images/digital-garden.png"
+            alt="Image of Digital Garden node graph"
+          />
+        </article>
+
+        <article>
+          <div class="text">
+            <h4>Graduation Project | Research</h4>
+            <h3>Accessible Video Games</h3>
+            <p class="blackbox">
+              Young children, especially those on the autistic spectrum, often
+              do not learn educational subjects and life skills in the same
+              manner as neurotypicals. Recreational activities like games,
+              puzzles and co-curriculars are known to provide additional
+              opportunities for learning while also engaging the child. This
+              project aimed to create a series of educational video games that
+              are accessible to children with autism, and can be used as a tool
+              for learning and development.
+              <a
+                href="https://ieeexplore.ieee.org/document/10179616/metrics#metrics"
+                target="_blank"
+                >Read the Research Paper here.</a
+              >
+            </p>
+            <h4>Technologies used:</h4>
+            <ul>
+              <li>C#</li>
+              <li>Unity 3D</li>
+            </ul>
+          </div>
+          <img
+            src="assets/images/asdgame.png"
+            alt="Image of Digital Garden node graph"
+          />
+        </article>
+
+        <article>
+          <div class="text">
+            <h4>Non-Technical Project</h4>
             <h3>CoffeeHouse - A UX Design Project</h3>
             <p class="blackbox">
               This project focused on the understanding and implementation of
@@ -114,43 +213,12 @@
             </ul>
           </div>
           <img
-            src="img/mockups.webp"
+            src="assets/images/mockups.webp"
             alt="Image of Accessible Mobile Ordering Application"
           />
         </article>
 
         <article>
-          <div class="text">
-            <h3>Animal Welfare, Care & Aid Mobile Application</h3>
-            <p class="blackbox">
-              The Animal Welfare, Care & Aid Mobile Application is an app for
-              Android and iOS developed in Python using KivyMD. The primary
-              objective of this application is to consolidate the various
-              services and features animal welfare activists and enthusiasts
-              require, but are unable to find and make use of on existing
-              platforms. The application is a one-stop hub for animal adoptions,
-              vaccinations, helpline numbers, donating to welfare drives etc.
-              <a
-                href="https://github.com/akashbagchi/minor-project-5sem"
-                target="_blank"
-                >View on GitHub</a
-              >
-            </p>
-            <h4>Technologies used:</h4>
-            <ul>
-              <li>Python</li>
-              <li>KivyMD</li>
-              <li>Buildozer</li>
-              <li>MySQL</li>
-            </ul>
-          </div>
-          <img
-            src="img/dogapp.webp"
-            alt="Image of Animal Welfare, Care and Aid mobile application"
-          />
-        </article>
-
-        <article class="reverse">
           <div class="text">
             <h4>Web Technologies Project</h4>
             <h3>University Student Resources Portal</h3>
@@ -180,60 +248,16 @@
             </ul>
           </div>
           <img
-            src="img/studentportalfinal.webp"
+            src="assets/images/studentportalfinal.webp"
             alt="Image of University student resources portal."
           />
         </article>
-
-        <article>
-          <div class="text">
-            <h4>UI/UX Introductory Project</h4>
-            <h3>"Blu-Tuna" Guitar Tuner Application</h3>
-            <p class="blackbox">
-              The "Blu-Tuna" mobile application is a design concept for an
-              application that can be used to tune guitars, ukuleles and other
-              stringed instruments. It features a playful and communicative
-              design with lively colors and a user-friendly interface. The app
-              provides tuner and metronome functionalities - two of the most
-              basic yet powerful tools in any budding musician's arsenal. This
-              design project was undertaken as part of The California Institute
-              of the Arts - "Elements of User Interface Design" course.
-            </p>
-            <h4>Technologies used:</h4>
-            <ul>
-              <li>Adobe XD</li>
-              <li>Google Fonts</li>
-            </ul>
-          </div>
-          <img
-            src="img/blutuna.webp"
-            alt="Image of Blu tuna guitar tuner application"
-          />
-        </article>
-      </section>
-    </div>
-
-    <!-- Contact me section -->
-    <div class="section-contact">
-      <section id="contactme">
-        <h2>Contact me</h2>
-        <p>
-          I'm always interested in hearing about opportunities to collaborate,
-          and create some great products. Also feel free to reach out with
-          feedback/queries about any of my projects, or this portfolio
-        </p>
-        <a
-          href="mailto:akashbagchi2710@gmail.com"
-          target="_blank"
-          class="button"
-          >Email me</a
-        >
       </section>
     </div>
 
     <!-- Footer section -->
     <div class="gradient-footer"></div>
-    <footer id="about">
+    <footer id="footer">
       <section id="content">
         <h2>Akash Bagchi // Product Development Engineer at LaKeel, Inc</h2>
         <ul>
@@ -258,12 +282,9 @@
             >
           </li>
         </ul>
-        <p class="abouttext">
-          I'm a Product Development Engineer at LaKeel, Inc in Tokyo, Japan. I love front-end design, and have built
-          this portfolio website using HTML and CSS only, opting out of using
-          technologies and frameworks such as Bootstrap and Vue, in order to
-          strengthen my foundation in the most standard technologies. I also have an avid interest in
-          music, and am a part-time singer-songwriter. You can find my work
+        <p>
+          There are plenty of links to my professional portfolio above, but if
+          you'd also like to check out my music, you can do so
           <a
             class="aboutlink"
             href="https://linktr.ee/akashbagchi"
@@ -271,8 +292,12 @@
             >here.</a
           >
         </p>
-        <p>© 2022 Akash Bagchi. All Rights Reserved.</p>
+        <p>© 2024 Akash Bagchi. All Rights Reserved.</p>
       </section>
     </footer>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-regular fa-sun sun-icon"></i>
+      <i class="fa-regular fa-moon moon-icon"></i>
+    </button>
   </body>
 </html>
