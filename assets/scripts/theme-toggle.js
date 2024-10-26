@@ -21,10 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTheme(preferredTheme);
 
-  // Add bounce animation after a short delay
   setTimeout(() => {
     toggle.classList.add("initial-bounce");
-    // Remove the class after animation completes to allow it to be triggered again if needed
     toggle.addEventListener("animationend", () => {
       toggle.classList.remove("initial-bounce");
     });

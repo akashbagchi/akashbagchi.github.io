@@ -29,7 +29,6 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Show/hide icons based on theme */
 .theme-toggle .sun-icon {
   opacity: 1;
   transform: rotate(0) scale(1);
@@ -40,7 +39,6 @@
   transform: rotate(90deg) scale(0.5);
 }
 
-/* Dark theme state */
 .theme-toggle[data-theme="dark"] .sun-icon {
   opacity: 0;
   transform: rotate(-90deg) scale(0.5);

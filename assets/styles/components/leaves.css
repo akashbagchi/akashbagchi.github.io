@@ -1,11 +1,9 @@
-/* Position the link */
 nav a[href*="garden"] {
   position: relative;
   padding: 0.3rem 0.8rem;
   z-index: 1;
 }
 
-/* Container for the leaves */
 .leaves-container {
   position: absolute;
   width: 100%;
@@ -17,19 +15,16 @@ nav a[href*="garden"] {
   z-index: -1;
 }
 
-/* Leaf styling */
 .leaf {
   fill: var(--color-accent);
   opacity: 0;
   transform-origin: center;
 }
 
-/* Individual leaf animations on hover */
 nav a[href*="garden"]:hover .leaf {
   animation: fadeAndFloat 1.5s ease-out forwards;
 }
 
-/* Stagger and vary the animations for each leaf */
 nav a[href*="garden"]:hover .leaf-1 {
   animation-delay: 0.1s;
   animation-name: fadeAndFloatLeft;
@@ -81,7 +76,6 @@ nav a[href*="garden"]:hover .leaf-10 {
   animation-name: fadeAndFloatFar;
 }
 
-/* Define the different floating animations */
 @keyframes fadeAndFloat {
   0% {
     opacity: 0;
