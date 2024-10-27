@@ -7,6 +7,14 @@
   --fraun: "Fraunces", serif;
   --font-heading: "DM Serif Display", serif;
   --font-body: "Noto Serif KR", serif;
+
+  &,
+  [data-theme="light"],
+  [data-theme="dark"] {
+    --transition-duration: 0.3s;
+    transition: background-color var(--transition-duration) ease,
+      color var(--transition-duration) ease;
+  }
 }
 
 /* Light theme (default) */
@@ -42,6 +50,8 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-weight: 400;
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
 }
 h1,
 h2,
@@ -156,6 +166,18 @@ nav .button:hover {
 #intro h2 {
   font-size: 3rem;
 }
+a,
+nav [class*="fa-"],
+.section-projects,
+.blackbox,
+#projects h2,
+#projects h3,
+.gradient-footer,
+footer,
+#content {
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
+}
 
 /* Projects section */
 .section-projects {
@@ -252,6 +274,7 @@ nav .button:hover {
   border-top: 2px solid var(--color-background);
   border-radius: 25px;
   padding: 0.6rem;
+  transition: border-color var(--transition-duration) ease;
 }
 [data-theme="dark"] #projects img {
   border-left: 2px solid var(--color-text);

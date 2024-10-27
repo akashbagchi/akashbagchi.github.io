@@ -8,7 +8,6 @@
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
   z-index: 999;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -16,17 +15,22 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
+  transition: transform 0.2s ease,
+    background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
 }
 
 .theme-toggle:hover {
   transform: scale(1.1);
   background: var(--color-accent);
+  transition: transform 0.2s ease, background-color 0.2s;
 }
 
 .theme-toggle i {
   font-size: 1.2rem;
   position: absolute;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .theme-toggle .sun-icon {
