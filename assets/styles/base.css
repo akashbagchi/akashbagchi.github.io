@@ -220,8 +220,8 @@ nav .button:hover {
   font-weight: bold;
 }
 [data-theme="dark"] #projects h2,
-#projects h3,
-#projects h4 {
+[data-theme="dark"] #projects h3,
+[data-theme="dark"] #projects h4 {
   color: var(--color-primary);
 }
 /* #projects li {
