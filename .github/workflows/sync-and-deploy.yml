@@ -1,4 +1,3 @@
-# .github/workflows/sync-and-deploy.yml
 name: Sync to Personal Repo
 
 on:
@@ -16,7 +15,6 @@ jobs:
 
       - name: Push to personal repository
         env:
-          SOURCE_REPO: "https://oauth2:${{ secrets.PAT }}@github.com/cursim-labs/personal-portfolio.git"
           DESTINATION_REPO: "https://oauth2:${{ secrets.PAT }}@github.com/akashbagchi/akashbagchi.github.io.git"
         run: |
           git remote add personal $DESTINATION_REPO
