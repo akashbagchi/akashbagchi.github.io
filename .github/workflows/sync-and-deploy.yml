@@ -12,10 +12,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.PAT }}
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Push to personal repository
         env:
-          DESTINATION_REPO: "https://oauth2:${{ secrets.PAT }}@github.com/akashbagchi/akashbagchi.github.io.git"
+          PERSONAL_TOKEN: ${{ secrets.PAT }}
         run: |
-          git remote add personal $DESTINATION_REPO
+          echo "Setting up remote..."
+          git remote add personal https://${{ secrets.PAT }}@github.com/akashbagchi/akashbagchi.github.io.git
+          echo "Pushing to personal repo..."
           git push personal main:main --force
