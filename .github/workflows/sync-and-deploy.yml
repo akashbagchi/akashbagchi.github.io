@@ -1,0 +1,23 @@
+# .github/workflows/sync-and-deploy.yml
+name: Sync to Personal Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to personal repository
+        env:
+          SOURCE_REPO: "https://oauth2:${{ secrets.SYNC_TOKEN }}@github.com:cursim-labs/personal-portfolio.git"
+          DESTINATION_REPO: "https://oauth2:${{ secrets.SYNC_TOKEN }}@github.com:akashbagchi/akashbagchi.github.io.git"
+        run: |
+          git remote add personal $DESTINATION_REPO
+          git push personal main:main --force
