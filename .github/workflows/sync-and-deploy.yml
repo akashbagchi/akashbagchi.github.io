@@ -7,12 +7,16 @@ on:
 
 jobs:
   sync:
+    # Only run in the org repo, skip in personal repo
+    if: github.repository == 'cursim-labs/personal-portfolio'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.PAT }}
+          persist-credentials: true
 
       - name: Configure Git
         run: |
@@ -20,10 +24,6 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Push to personal repository
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PAT }}
         run: |
-          echo "Setting up remote..."
           git remote add personal https://${{ secrets.PAT }}@github.com/akashbagchi/akashbagchi.github.io.git
-          echo "Pushing to personal repo..."
           git push personal main:main --force
